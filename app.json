@@ -1,0 +1,15 @@
+{
+    "name":"brtoficcal",
+    "description":"An example bot using tgcallsjs",
+    "env":{
+        "BOT_TOKEN":{
+            "description":"Bot token from @botfather",
+            "value":""
+        },
+        "WEBSOCKET_URL":{
+            "description":"websocket url from https://github.com/hacke777/music-stream-bot",
+            "value": "http://appname.herokuapp.com"
+        }
+    },
+    "stack":"container"
+}
