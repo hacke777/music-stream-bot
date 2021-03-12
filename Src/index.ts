@@ -1,9 +1,13 @@
-import { bot } from './bot';
-import { initHandlers } from './handlers';
+import { bot } from '../bot';
 
-(async () => {
-    initHandlers();
+import { playHandler } from './play';
+import { queueHandler } from './queue';
+import { pauseHandler } from './pause';
+import { skipHandler } from './skip';
 
-    await bot.launch();
-    console.log(`@${bot.botInfo?.username} is running...`);
-})();
+export const initHandlers = (): void => {
+    bot.use(playHandler);
+    bot.use(queueHandler);
+    bot.use(pauseHandler);
+    bot.use(skipHandler);
+};
